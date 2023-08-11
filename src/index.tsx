@@ -1,12 +1,14 @@
+import "./index.css";
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import App from "./App";
+import HomePage from "Pages/HomePage/HomePage";
+import { Provider } from "react-redux";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Provider } from "react-redux";
 import store from "store/MainStore";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import HomePage from "Pages/HomePage/HomePage";
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
 root.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<RouterProvider router={router}  />
+			<RouterProvider router={router} />
 		</Provider>
 	</React.StrictMode>
 );

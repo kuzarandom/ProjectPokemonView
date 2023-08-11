@@ -23,6 +23,8 @@
 			"@Store": ["/store"],
 			"@Page/*": ["/Page/*"],
 			"@Page": ["/Page"],
+			"@Configs/*":["/Configs/*"],
+			"@Configs":["/Configs"]
 		}
 	},
 	"include": ["src"]

@@ -1,9 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { CardService } from "Service/CardService";
 
 const store = configureStore({
-	reducer: {},
+	reducer: {
+		[CardService.reducerPath]: CardService.reducer,
+	},
 	middleware: (getDefaultMiddleware) => {
-		return getDefaultMiddleware().concat();
+		return getDefaultMiddleware().concat(CardService.middleware);
 	},
 });
 
